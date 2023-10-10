@@ -23,8 +23,20 @@
     "experimentalDecorators": true,
     "strictPropertyInitialization": false,
     "esModuleInterop": true,
-    "types": ["node", "jest"]
+    "resolveJsonModule": true,
+    "types": ["node", "jest"],
+    "paths": {
+      "@endpoints/*": [
+        "endpoints/*"
+      ],
+      "@prisma/*": [
+        "prisma/*"
+      ],
+      "@common/*": [
+        "common/*"
+      ],
+    }
   },
-  "include": ["src/**/*", "test/**/*"],
-  "exclude": ["node_modules"]
+  "include": ["src/**/*", "endpoints/**/*", "test/**/*"],
+  "exclude": ["node_modules"]  
 }
